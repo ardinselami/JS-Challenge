@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Detyra 2:</h2>
+
+
+    <label for="password">Enter your password:</label>
+    <input type="password" id="inputPasswordin">
+    <button onclick="validoPasswordin()">Submit</button>
+    
+    <div id="password"></div>
+    <p id="message"></p>
+
+    <script>
+function validoPasswordin() {
+    var password = document.getElementById("inputPasswordin").value;
+    var paraqitPassword = document.getElementById("password");
+    var mesazhi = document.getElementById("message");
+    
+    paraqitPassword.textContent = "Password entered: " + password;
+
+    // Check password length
+    if (password.length < 8) {
+        mesazhi.textContent = "Error: Password must be at least 8 characters long.";
+        return;
+    }
+
+    if (!/\d/.test(password)) {
+        mesazhi.textContent = "Error: Password must contain at least one number.";
+        return;
+    }
+    if (!/[A-Z]/.test(password)) {
+        mesazhi.textContent = "Error: Password must contain at least one uppercase letter.";
+        return;
+    }
+    mesazhi.textContent = "Your password is valid!";
+}
+    </script>
+</body>
+</html>

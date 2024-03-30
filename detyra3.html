@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+    function generateTable(nrRows, nrColumns) {
+        let table = '<table>';
+        table += '<tr>';
+        for (let j = 0; j < nrColumns; j++) {
+          table += '<th>Header ' + (j + 1) + '</th>';
+        }
+        table += '</tr>';
+        
+        for (let i = 0; i < nrRows; i++) {
+          table += '<tr>';
+          for (let j = 0; j < nrColumns; j++) {
+            table += '<td>Row ' + (i + 1) + ', Col ' + (j + 1) + '</td>';
+          }
+          table += '</tr>';
+        }
+        
+        table += '</table>';
+        return table;
+      }
+
+      let nrRows = parseInt(prompt("Enter the number of rows:"));
+      let nrColumns = parseInt(prompt("Enter the number of columns:"));
+      let tableHTML = generateTable(nrRows, nrColumns);
+      document.body.innerHTML = tableHTML;
+      </script>
+</body>
+</html>

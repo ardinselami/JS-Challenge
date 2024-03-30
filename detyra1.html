@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Detyra 1</h2>
+    <script>
+        function arrayITransformuar(array) {
+    const arrayITransformuar = [];
+    for (let i = 0; i < array.length; i++) {
+        const number = array[i];
+        if (number < 10) {
+            arrayITransformuar.push(number * 2);
+        } else {
+            arrayITransformuar.push(number * 4);
+        }
+    }
+    return arrayITransformuar;
+}
+
+const array = [1, 5, 10, 11, 20, 34];
+console.log(transformArray(array));
+    </script>
+</body>
+</html>
